@@ -1,20 +1,20 @@
-name: Run QASe tests
+name: Run Playwright tests
 
-on:
-  push:
-    branches: [ main ]  # Ejecutar pruebas cuando se haga push a la rama main
+on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install QASe
-      run: |
-        # Comando para instalar QASe, depende de cómo lo hayas instalado
+    - name: Install Node.js and dependencies
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - run: npm install
 
-    - name: Run QASe tests
-      run: qase run-tests   # Comando para ejecutar tus pruebas con QASe
+    - name: Run Playwright tests
+      run: npm run testing

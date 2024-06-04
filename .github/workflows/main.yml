@@ -1,0 +1,20 @@
+name: Run QASe tests
+
+on:
+  push:
+    branches: [ main ]  # Ejecutar pruebas cuando se haga push a la rama main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install QASe
+      run: |
+        # Comando para instalar QASe, depende de cómo lo hayas instalado
+
+    - name: Run QASe tests
+      run: qase run-tests   # Comando para ejecutar tus pruebas con QASe

@@ -15,3 +15,4 @@ test('FLUJO FELIZ 1', async ({ page }) => {
     await searchInput.fill('Iphone');
     // expect(true).toBe(true);
 });
+

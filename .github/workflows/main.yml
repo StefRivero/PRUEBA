@@ -16,5 +16,8 @@ jobs:
         node-version: '14'
     - run: npm install
 
+    - name: Install playwright
+      run: npx playwright install  
+
     - name: Run Playwright tests
       run: npm run test

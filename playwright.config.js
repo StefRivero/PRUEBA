@@ -11,9 +11,9 @@ const config = {
         debug: true,
         testops: {
           api: {
-            token: '7c0650e16316c70cf12ecfcdf0c8d8404486863bd9ec8ca0bf5497bc95ef030b',
+            token: 'a505a24ce9a7a81bc094febfb67954345c44edf693e7584e50a385f26eb59fe1',
           },
-          project: 'SOLOTODOS',
+          project: 'SOLOTODO',
           uploadAttachments: true,
           run: {
             // id: true,
